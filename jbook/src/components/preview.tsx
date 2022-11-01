@@ -8,7 +8,9 @@ interface PreviewProps{
 
 const html = `
 <html>
-  <head></head>
+  <head>
+  <style>html {background-color:white}</style>
+  </head>
   <body>
     <div id="root"></div>
     <script>
@@ -45,7 +47,7 @@ const Preview: React.FC<PreviewProps> = ({code}) => {
       title="preview" 
       ref={iframe} 
       srcDoc={html} 
-      sandbox="allow-scripts" />;
+      sandbox="allow-scripts" />
     </div>
     )
 };

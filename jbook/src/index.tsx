@@ -1,12 +1,13 @@
 import 'bulmaswatch/superhero/bulmaswatch.min.css'
 
 //1a) Import useState
-import { useState} from "react";
+// import { useState} from "react";
 
 // 1) Import ReactDOM library
 import ReactDOM from "react-dom/client";
 
-import CodeCell from './components/code-cell';
+// import CodeCell from './components/code-cell';
+import TextEditor from './components/text-editor';
 // 2) Get a reference to the div with ID root
 const el = document.getElementById("root");
  
@@ -18,7 +19,7 @@ const App = () => {
   
   return (
     <div>
-     <CodeCell />
+     <TextEditor/>
     </div>
   );
 };

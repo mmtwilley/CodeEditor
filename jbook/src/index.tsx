@@ -10,7 +10,8 @@ import {store} from './state';
 import ReactDOM from "react-dom/client";
 
 // import CodeCell from './components/code-cell';
-import TextEditor from './components/text-editor';
+// import TextEditor from './components/text-editor';
+import CellList from './components/code-list';
 // 2) Get a reference to the div with ID root
 const el = document.getElementById("root");
 
@@ -25,7 +26,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <div>
-        <TextEditor/>
+        <CellList/>
      </div>
     </Provider>
   

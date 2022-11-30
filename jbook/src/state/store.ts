@@ -33,3 +33,5 @@ store.dispatch({
         type:'code'
     }
 })
+
+console.log(state)

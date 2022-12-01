@@ -4,7 +4,7 @@ import Preview from './preview';
 import bundle from '../bundler';
 import Resizable from "./resizeable";
 import { Cell } from "../state";
-import {useActions} from '../hook/use-actions'
+import {useActions} from '../hooks/use-actions'
 
 
 
@@ -25,7 +25,7 @@ const CodeCell:React.FC<CodeCellProps> = ({cell}) => {
       const output = await bundle(cell.content);
       setCode(output.code);
       setErr(output.err);
-    },2500)
+    },750)
 
     return () =>{
       clearTimeout(timer);
@@ -35,11 +35,11 @@ const CodeCell:React.FC<CodeCellProps> = ({cell}) => {
 
   return (
     <Resizable direction="vertical">
-      <div style={{height:'100%',display:'flex', flexDirection:'row'}}>
+      <div style={{height:'calc(100% - 10px)',display:'flex', flexDirection:'row'}}>
        <Resizable direction="horizontal">
           <CodeEditor 
           initialValue={cell.content}
-          onChange={(value) => (cell.id,value)}
+          onChange={(value) => (cell.id, value)}
           />
         </Resizable>
         <Preview code={code} err={err}/>

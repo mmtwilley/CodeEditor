@@ -1,9 +1,10 @@
 import './code-list-item.css';
+import React from 'react';
 import {Cell} from '../state';
 import CodeCell from './code-cell';
 import TextEditor from './text-editor';
 import ActionBar from './action-bar';
-import React from 'react';
+
 
 interface CellListItemProps{
     cell:Cell
